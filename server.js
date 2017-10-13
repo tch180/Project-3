@@ -24,13 +24,21 @@ app.use(bodyParser.json());
 app.get('/', (req,res) => {
 res.send('Hello world!')
 })
+///////////////
+//Middleware 
+///////////////
+app.use(express.static(__dirname + '/client/build/'));
+
+app.get('/', (req,res) => {
+	res.sendFile(__dirname + '/client/build/index.html')
+})
 
 
 ///////////////
 //PORT 
 ///////////////
 
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 3001;
 app.listen(PORT, () => {
 console.log(`--------------------SERVER IS UP AND RUNNING ON PORT ${PORT} BOSS`);
 })

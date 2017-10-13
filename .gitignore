@@ -56,4 +56,6 @@ typings/
 
 # dotenv environment variables file
 .env
+# client build file 
+client/build/
 
