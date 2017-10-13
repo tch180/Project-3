@@ -21,9 +21,7 @@ console.log('Mongoose default connection error: ' + err);
 });
 
 app.use(bodyParser.json());
-app.get('/', (req,res) => {
-res.send('Hello world!')
-})
+
 ///////////////
 //Middleware 
 ///////////////
