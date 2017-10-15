@@ -12,7 +12,7 @@ mongoose.connect(process.env.MONGODB_URI); //mongodb://localhost/idea-board
 
 const connection = mongoose.connection;
 connection.on('connected', () => {
-console.log(`--------------- JARVIS IS UP AND RUNNING ON ${PORT} `);
+console.log(`--------------- JARVIS IS UP AND RUNNING ON` + PORT);
 });
 
 // If the connection throws an error
@@ -30,7 +30,9 @@ app.use(express.static(__dirname + '/client/build/'));
 app.get('/', (req,res) => {
 	res.sendFile(__dirname + '/client/build/index.html')
 })
-
+app.get('/', (req, res) => {
+    res.sendFile(`${__dirname}/client/build/index.html`)
+  })
 
 ///////////////
 //PORT 
