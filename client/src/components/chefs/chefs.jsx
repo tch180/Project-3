@@ -14,7 +14,7 @@ class chefs extends Component {
               <h2>speciality:</h2>
               </div>
             <div class="card-action">
-              <a href="#">Information</a>
+              <a href="chefinfo">Information</a>
               <a href="#">Book Now!!</a>
             </div>
           </div>

@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom'
 import homepage from './components/homepage'
-import chefs from './components/chefs'
+import chefs from './components/chefs/chefs'
+import login from './components/users/login'
 import axios from 'axios'
 
 
@@ -16,7 +17,7 @@ class App extends Component {
               <Link to="/">Home</Link>
             </div>
             <div>
-              <Link to="/home">Login</Link>
+              <Link to="/login">Login</Link>
             </div>
             <div>
               <Link to="/chefs">Chefs</Link>
@@ -25,6 +26,7 @@ class App extends Component {
           <Switch>
             <Route exact path="/" component={homepage} />
             <Route exact path="/chefs" component={chefs}/>
+            <Route exact path="/login" component={login}/>
             
           </Switch>
         </div>

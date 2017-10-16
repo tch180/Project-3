@@ -128,19 +128,19 @@ const chefbob = new chefModel({
     name: 'Chef Bob',
     bio: 'Labore deserunt duis aliquip et id irure tempor do et.',
     price: 60,
-    Speciality: 'Asian and pastrys',
+    Specialty: 'Asian and pastrys',
 })
 const chefrob = new chefModel({
     name: 'Chef Robert',
     bio: 'Labore deserunt duis aliquip et id irure tempor do et.',
     price: 35,
-    Speciality: 'Mexican',
+    Specialty: 'Mexican',
 })
 const chefClare = new chefModel({
     name: 'Chef Clare',
     bio: 'Labore deserunt duis aliquip et id irure tempor do et.',
     price: 45,
-    Speciality: 'Italian',
+    Specialty: 'Italian',
 })
 
 const chefs = [chefbob, chefrob, chefClare]

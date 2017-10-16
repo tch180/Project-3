@@ -18,7 +18,7 @@ const chefSchema = new Schema({
     name: String,
     bio: String,
     Price: Number,
-    Speciality: String,
+    Specialty: String,
 })
 
 ///////////////////////
@@ -45,16 +45,26 @@ const usersSchema = new Schema({
         type: String,
         required: true
     },
+    phoneNumber: {
+        type: String,
+        required: true,
+
+    }, 
+    address: {
+        type: String,
+        required: true
+    },
+    
 
 })
 
 
 ///////////////
-//Accounts 
+//Accounts Schema
 ///////////////
 const accountSchema = Schema({
     balance: Number,
-    transacations: String,
+    transactions: String,
 
 
 })

@@ -2,38 +2,22 @@ import React, { Component } from 'react';
 import styled from 'styled-components';
 
 
-
-const homeStyles = styled.div`
-height: 300px;
-width: 300px;
-margin: 20px;
-background-color: rgba(223, 255, 0, 0.79);
-
-
-} h1 {
-    text-align:center;
-}
-`;
-const headingStyles = styled.h1` 
-  background-color: green;
-  font-size: 45px;
-`;
+const headingStyles = styled.div`
+background-color: red;
+text-align:center;
+}`
 
 
 
   
 const homepage = (props) => {
     return (
-        
-        <homeStyles>
-            <headingStyles>
+        <headingStyles>
+      <div class='container'>
         <h1>Welcome To Second Chef</h1>
         <h2>Your netflix's of personal Chefs</h2>
-    </headingStyles>
-
-
-        
-      </homeStyles>
+   </div>
+   </headingStyles>
        
     )}
 
