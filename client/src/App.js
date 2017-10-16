@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom'
 import homepage from './components/homepage'
 import chefs from './components/chefs/chefs'
 import login from './components/users/login'
-import axios from 'axios'
+import chefinfo from './components/chefs/chefInfo'
 
 
 
@@ -27,6 +27,7 @@ class App extends Component {
             <Route exact path="/" component={homepage} />
             <Route exact path="/chefs" component={chefs}/>
             <Route exact path="/login" component={login}/>
+           <Route exact path = "/chefinfo" component={chefinfo}/> 
             
           </Switch>
         </div>

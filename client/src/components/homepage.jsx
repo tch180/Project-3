@@ -2,24 +2,30 @@ import React, { Component } from 'react';
 import styled from 'styled-components';
 
 
-const headingStyles = styled.div`
-background-color: red;
+const homestyle = styled.div`
 text-align:center;
-}`
+background-color: green;
+`
 
 
-
-  
-const homepage = (props) => {
-    return (
-        <headingStyles>
+class homepage extends Component {
+    render() {
+        return (
+            <homestyle>
       <div class='container'>
         <h1>Welcome To Second Chef</h1>
         <h2>Your netflix's of personal Chefs</h2>
    </div>
-   </headingStyles>
+  </homestyle>
+        );
+    }
+}
+  
+
+
+
        
-    )}
+    
 
 export default homepage;
 

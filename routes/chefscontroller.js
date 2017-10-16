@@ -1,12 +1,12 @@
 const express = require('express')
 const router = express.Router()
-const chef  = require('../db/schema')
+const {chefModel}  = require('../db/schema')
 
 
 
 router.get('/', async (req, res) => {
   try {
-    const chef = await chef.find({})
+    const chef = await chefModel.find({})
     res.json(chef)
   } catch (err) {
     res.send(err)
@@ -14,7 +14,7 @@ router.get('/', async (req, res) => {
 })
 router.get('/:id', async (req, res) => {
   try {
-    const chef = await chef.findById(req.params.id)
+    const chef = await chefModel.findById(req.params.id)
     res.json(chef)
   } catch (err) {
     res.send(err)

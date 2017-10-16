@@ -96,14 +96,22 @@ recipe.forEach((recipe) => {
 const bob = new usersModel({
     name: "bob, Smith",
     email: "BobSmith@gmail.com",
+    phoneNUmber: "122-244-9878",
+    address: '123 bonavista lane Powder Springs ga 30127 '
+    
 });
 const Victory = new usersModel({
     name: "Victory, Smith",
     email: "VictorySmith@gmail.com",
+    phoneNUmber: "122-244-9878",
+    address: '123 bonavista lane Powder Springs ga 30127 ',
+    
 });
 const Elias = new usersModel({
     name: "Elias, Smith",
     email: "EliasSmith@gmail.com",
+    phoneNUmber: '122-244-9878',
+    address: '123 bonavista lane Powder Springs ga 30127 '
 });
 
 const users = [bob, Victory, Elias]

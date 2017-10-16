@@ -4,7 +4,7 @@ class login extends Component {
     render() {
         return (
         
-            <form action="INFO" method="post">
+            <form action="GET" method="post">
               <div>
                 <label>Name:</label>
                 <input type="name" name="name" id="name" />

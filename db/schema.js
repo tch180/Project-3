@@ -10,16 +10,9 @@ const mongoose = require('mongoose')
 ///////////////////////
 const Schema = mongoose.Schema
 
-///////////////////////
-//Chef SCHEMA
-///////////////////////
 
-const chefSchema = new Schema({
-    name: String,
-    bio: String,
-    Price: Number,
-    Specialty: String,
-})
+
+
 
 ///////////////////////
 //RECIPES SCHEMA
@@ -28,10 +21,24 @@ const recipeSchema = new Schema({
     name: String,
     description: String,
     image: String,
-    Price: String,
-    Quantity: Number,
+    price: String,
+    quantity: Number,
+
 
 })
+
+///////////////////////
+//Chef SCHEMA
+///////////////////////
+
+const chefSchema = new Schema({
+    name: String,
+    bio: String,
+    price: Number,
+    specialty: String,
+})
+
+
 
 ///////////////////////
 //USERS SCHEMA
@@ -47,7 +54,7 @@ const usersSchema = new Schema({
     },
     phoneNumber: {
         type: String,
-        required: true,
+        required: false,
 
     }, 
     address: {

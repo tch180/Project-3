@@ -4,6 +4,7 @@ const bodyParser = require("body-parser");
 const mongoose = require("mongoose");
 const app = express();
 const chef = require('./routes/chefscontroller');
+const user = require('./routes/usercontroller');
 ///////////////
 //DataBase
 ///////////////
@@ -27,6 +28,7 @@ app.use(bodyParser.json());
 ///////////////
 app.use(express.static(__dirname + "/client/build/"));
 app.use("/api/chefs", chef);
+app.use("/api/users", user);
 
 ///////////////
 //PORT
