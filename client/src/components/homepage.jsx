@@ -1,31 +1,35 @@
 import React, { Component } from 'react';
+import Navbar from './Navbar';
 import styled from 'styled-components';
 
 
-const homestyle = styled.div`
-text-align:center;
-background-color: green;
+const Homestyle = styled.div`
+text-align: center;
+background-color: black;
+color: red;
 `
 
 
-class homepage extends Component {
-    render() {
-        return (
-            <homestyle>
-      <div class='container'>
+
+
+const homepage = (props) => {
+    
+    return (
+      <div>
+        <div>
+        <Navbar/>
+      </div>
+        <Homestyle>  
+      <div className='container'>
         <h1>Welcome To Second Chef</h1>
         <h2>Your netflix's of personal Chefs</h2>
    </div>
-  </homestyle>
-        );
-    }
-}
+    </Homestyle>
+   </div>
+   
   
-
-
-
-       
-    
+     
+    )}
 
 export default homepage;
 

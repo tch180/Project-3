@@ -1,11 +1,12 @@
 import React, { Component } from 'react';
+import Navbar from '../Navbar';
 import axios from 'axios'
 
 
 
 class chefs extends Component {
 
-  /* state={
+   state={
     chef: {
       name:"",
       bio:"",
@@ -18,19 +19,21 @@ class chefs extends Component {
     console.log(res.data)
     this.setState({chefs: res.data})
   }
- */
+ 
 
 
 
     render() {
-     return (
 
+     return (
+<div>
+  <Navbar/>
             
       <div class="row">
         <div class="col s12 m6">
           <div class="card black darken-1">
             <div class="card-content white-text">
-              <span class="card-title">Chef Name </span>
+              <span class="card-title">{this.state.chef.name} </span>
               <h3>name:</h3>
               <h3>specialty:</h3>
             </div>
@@ -40,6 +43,7 @@ class chefs extends Component {
             </div>
           </div>
         </div>
+      </div>
       </div>
             
      );
