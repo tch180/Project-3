@@ -27,8 +27,9 @@ app.use(bodyParser.json());
 //Middleware
 ///////////////
 app.use(express.static(__dirname + "/client/build/"));
-app.use("/api/chefs", chef);
-app.use("/api/users", user);
+app.use("/api/secondchef", chef);
+app.use("/api/users", user )
+
 
 ///////////////
 //PORT

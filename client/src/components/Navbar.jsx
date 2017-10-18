@@ -12,13 +12,14 @@ class Navbar extends Component {
             <Navbarhead>
                 <div>
         <nav>
-        <div class="nav-wrapper">
-          <a href="#" background-color='black'  class="brand-logo right">2nd Chef</a>
-          <ul id="nav-mobile" class="left hide-on-med-and-down">
+        <div className="nav-wrapper">
+          <a href="#" background-color='black'  className="brand-logo right">2nd Chef</a>
+          <ul id="nav-mobile" className="left hide-on-med-and-down">
             <li><a href="/">Home</a></li>
             <li><a href="/login">Login</a></li>
             <li><a href="./signup">Sign-Up</a></li>
             <li><a href="/chefs">Chefs</a></li>
+            <li><a href='./allUsers'>Users</a></li>
             
           </ul>
         </div>

@@ -1,12 +1,13 @@
 import React, { Component } from 'react';
 import Navbar from '../Navbar'
+
 class Signup extends Component {
     render() {
         return (
         <div>
         <Navbar/> 
             <div>
-                <form action="">
+                <form action="POST">
                     <div>
                             <label>Name:</label>
                             <input type="text" placeholder="Enter Name"/>
