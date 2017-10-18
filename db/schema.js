@@ -83,7 +83,7 @@ const accountSchema = Schema({
 const recipe = mongoose.model('recipe', recipeSchema);
 const chef = mongoose.model('chef', chefSchema)
 const users = mongoose.model('users', usersSchema);
-//export your recipe with module.exports()
+
 
 
 ///////////////////////

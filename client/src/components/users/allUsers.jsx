@@ -13,14 +13,12 @@ class users extends Component {
     this.setState({ users: res.data });
   };
 
-  handleDelete= async (event) =>{
-    event.predentDefault()
-    this.props.deleteUser(this.state.user)
-  }
-  deleteUser = async (userId) => {
+ 
+  deleteUser = async () => {
     const userId = this.props.match.params._id
-    const id = userId
-    const res = await.axios.delete('/api/users/${userId}')
+    // const id = userId
+    // const res = await axios.delete('/api/users/${userId}')
+    console.log(this.props)
   }
   componentWillMount() {
     this.getAllChef();
@@ -46,7 +44,7 @@ class users extends Component {
                   </div>
                   <div className="card-action">
                   <div><Link key={user._id} to={`/users/${user._id}/userInfo`}>Edit</Link></div>
-                    <button onClick={this.props.deleteUser}>Delete</button>
+                    <button key={user._id} onClick={this.deleteUser}>Delete</button>
                   </div>
                 </div>
               </div>
