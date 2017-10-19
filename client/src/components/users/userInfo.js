@@ -41,11 +41,11 @@ class userInfo extends Component {
   editUser = async () => {
     const userid = this.props.match.params.id
         const res = await axios.patch(`/api/users/${userid}`, {
-          users: this.state.users,
+          users: this.state.user,
         })
         this.setState({ user: res.data, redirectToAllUser: true })
       }
-
+    
 
   handleSubmit = async (event)=> {
     event.preventDefault()
@@ -63,7 +63,6 @@ class userInfo extends Component {
 
   componentWillMount() {
     this.getAllUser();
-    this.editUser();
   }
 
   
@@ -71,7 +70,7 @@ class userInfo extends Component {
     if (this.state.redirectToAllUser){
       return <Redirect to={`/allUsers`}/>
     }
-    return 
+    return (
     <div>
         <pre>{JSON.stringify(this.state.user)}</pre>
         <Navbar />
@@ -105,9 +104,11 @@ class userInfo extends Component {
                  
                   <br />
                   <button onClick={this.editUser}>Update</button>
-    </div>
+                </div>
            
-  }
+    )
+          }
+        
 }
-
+    
 export default userInfo;
