@@ -44,25 +44,10 @@ const chefSchema = new Schema({
 //USERS SCHEMA
 ///////////////////////
 const usersSchema = new Schema({
-    name: {
-        type: String,
-        required: true,
-    },
-    email: {
-        type: String,
-        required: true,
-    },
-    phoneNumber: {
-        type: String,
-        required: false,
-
-    }, 
-    address: {
-        type: String,
-        required: true,
-    },
-    
-
+    name:  String,
+    email:  String,
+    phoneNumber:  String,
+    address:  String,
 })
 
 

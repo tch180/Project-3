@@ -8,7 +8,8 @@ class Signup extends Component {
         state= {
             users:[],
             redirectToAllUser: false,
-            userId:''
+            userId: '',
+            
         }
 
 
@@ -16,7 +17,6 @@ handleChange = (event)=>{
     const attribute = event.target.name
     console.log('change')
     const updateUser = {...this.state.users}
-    
     updateUser[attribute] = event.target.value
     this.setState({users: updateUser})
 }
@@ -25,8 +25,11 @@ handleSubmit = async (event)=> {
     event.preventDefault()
     console.log('submit')
     const res = await axios.post('/api/users', {
+        
         'user' : this.state.users
+        
     })
+    console.log(res.data)
     this.setState({redirectToUsers: true, userId: res.data._id})
 }
 
@@ -43,22 +46,22 @@ handleSubmit = async (event)=> {
                 <form onSubmit={this.handleSubmit}>
                     <div>
                             <label htmlFor='name'>Name:</label>
-                            <input onChange={this.handleChange} type="text" placeholder="Enter Name" value={this.state.users.name}/>
+                            <input onChange={this.handleChange} type="text" placeholder="Enter Name"  name="name" value={this.state.users.name}/>
                     </div>
                     <div>
                             <label htmlFor='phoneNumber'>Phone Number:</label>
-                            <input onChange={this.handleChange} type="tel" placeholder="Enter Phone Number" value={this.state.users.phoneNumber}/>
+                            <input onChange={this.handleChange} type="text" placeholder="Enter Phone Number" name="phoneNumber" value={this.state.users.phoneNumber}/>
                     </div>
                     <div>
                             <label htmlFor='email' >Email:</label>
-                            <input onChange={this.handleChange} type="email" placeholder="Enter Email Address"value={this.state.users.email}/>
+                            <input onChange={this.handleChange} type="email" placeholder="Enter Email Address" name="email" value={this.state.users.email}/>
                     </div>
                     <div>
                             <label htmlFor='address' >Address:</label>
-                            <input type="text" placeholder="Enter Address" value={this.state.users.address}/>
+                            <input type="text" placeholder="Enter Address" name="address" value={this.state.users.address}/>
                     </div>
                     <div>
-                    <button  onClick={this.handleChange }>Submit </button>
+                    <button>Submit </button>
                     </div>
                  </form>
             </div>

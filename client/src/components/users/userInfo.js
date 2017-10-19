@@ -78,20 +78,20 @@ class userInfo extends Component {
 
         
                     <div>
-                            <label>Name:{this.state.user.name}</label>
-                            <input type="text" placeholder={this.state.user.name}/>
+                            <label htmlFor="name">Name:{this.state.user.name}</label>
+                            <input onChange={this.handleChange} type="text" name="name" placeholder={this.state.user.name} value={this.state.user.name}/>
                     </div>
                     <div>
                             <label>Phone Number:</label>
-                            <input type="text" placeholder={this.state.user.phonenumber}/>
+                            <input onChange={this.handleChange} type="text" name="phoneNumber" placeholder={this.state.user.phonenumber} value={this.state.user.phoneNumber} />
                     </div>
                     <div>
                             <label>Email:</label>
-                            <input type="email" placeholder={this.state.user.email}/>
+                            <input onChange={this.handleChange} type="email" name="email" placeholder={this.state.user.email} value={this.state.user.email}/>
                     </div>
                     <div>
                             <label>Address:</label>
-                            <input type="text" placeholder={this.state.user.address}/>
+                            <input onChange={this.handleChange} type="text" name="address" placeholder={this.state.user.address} value={this.state.user.address}/>
                     </div>
                     <div> <button onClick={this.deleteUser}>Delete</button>
                     </div>
@@ -99,10 +99,10 @@ class userInfo extends Component {
         
 
         
-                  <button href="/allUsers">Back to users</button>
+                  <button href="./allUsers">Back to users</button>
                  
                   <br />
-                  <button onClick={this.handleChange}>Update</button>
+                  <button onClick={this.editUser}>Update</button>
                 </div>
            
   }

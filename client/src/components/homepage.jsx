@@ -6,7 +6,8 @@ import styled from 'styled-components';
 const Homestyle = styled.div`
 text-align: center;
 background-color: black;
-color: red;
+color: White;
+background-image: url('https://i.imgur.com/NCTOjV4.jpg')
 `
 
 

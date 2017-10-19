@@ -31,9 +31,9 @@ router.get('/', async (req, res) => {
 
   router.patch('/:id', async (req,res)=>{
     const updatedUser = req.body.users
-    console.log('route hit ')
+    console.log(req.params.id)
     const user = await usersModel.findById(req.params.id)
-    user.name = updatedUser.Name
+    user.name = updatedUser.name
     user.phoneNumber = updatedUser.phoneNumber
     user.email = updatedUser.email
     user.address = updatedUser.address
@@ -54,19 +54,7 @@ router.get('/', async (req, res) => {
   })
 
 
-  ///////////////
-  //post
-  ///////////////
 
-router.post('/', async (req,res)=> {
-  try {
-  const updateUser = new user (req.body.user)
-  const saved = await updateUser.save()
-  res.json(saved)
-}catch (err){
-  res.send(err)
-}
-})
 
 
 
