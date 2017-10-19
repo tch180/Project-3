@@ -2,7 +2,8 @@ import React, { Component } from 'react';
 import styled from 'styled-components';
 
 const Navbarhead = styled.div`
-background-image: url('https://i.imgur.com/8l0eRk3.jpg?1')
+background-image: url('https://i.imgur.com/NCTOjV4.jpg');
+background-color:black;
 `
 
 

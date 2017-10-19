@@ -1,15 +1,19 @@
 import React, { Component } from 'react';
-import Navbar from "../Navbar";
-import axios from "axios";
+import Navbar from '../Navbar';
+import axios from 'axios';
+/* import { Redirect } from 'react-router-dom'
+
 
 
 import { Link } from 'react-router-dom'
+ */
+
 class menu extends Component {
     state ={
         recipes:[]
     };
     getAllMenu = async () => {
-        const res = await axios.get("/api/recipe")
+        const res = await axios.get("/api/recipes")
         console.log(res.data)
         this.setState({recipes: res.data})
     }
@@ -27,7 +31,7 @@ componentWillMount() {
         return (
             <div>
                 <Navbar/>
-                <div>
+             {/*    <div>
                 <div className="card">
     <div className="card-image waves-effect waves-block waves-light">
       <img className="activator" src="images/office.jpg"/>
@@ -41,11 +45,11 @@ componentWillMount() {
       <p>Here is some more information about this product that is only revealed once clicked on.</p>
     </div>
   </div>
-                </div>
+                </div> */}
             </div>
         );
-    })
-  )
-}
+             })
+        )
+    }
 }
 export default menu;

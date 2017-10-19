@@ -7,7 +7,7 @@ import chefinfo from './components/chefs/chefInfo'
 import signup from './components/users/signup'
 import allUsers from './components/users/allUsers'
 import userInfo from './components/users/userInfo'
-import menu from './components/menu/menu'
+import menuinfo from './components/menu/menuinfo'
 
 
 class App extends Component {
@@ -19,11 +19,12 @@ class App extends Component {
             <Route exact path="/" component={homepage} />
             <Route exact path="/chefs" component={chefs}/>
             <Route exact path="/login" component={login}/>
+            <Route exact path = "/menu" component={menuinfo}/>
            <Route exact path = "/chef/:id/chefinfo" component={chefinfo}/> 
            <Route exact path = "/signup"  component={signup}/>
            <Route exact path = '/allUsers' component={allUsers}/>
            <Route exact path = '/users/:id/userInfo' component={userInfo}/>
-           <Route exact path = "/menu" component={menu}/>
+           
           </Switch>
         
       </Router>

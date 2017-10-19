@@ -76,8 +76,8 @@ class userInfo extends Component {
         <Navbar />
 
 
-
-        
+<div>
+        <form >
                     <div>
                             <label htmlFor="name">Name:{this.state.user.name}</label>
                             <input onChange={this.handleChange} type="text" name="name" placeholder={this.state.user.name} value={this.state.user.name}/>
@@ -95,7 +95,7 @@ class userInfo extends Component {
                             <input onChange={this.handleChange} type="text" name="address" placeholder={this.state.user.address} value={this.state.user.address}/>
                     </div>
                     <div> <button onClick={this.deleteUser}>Delete</button>
-                    </div>
+                    
                
         
 
@@ -105,9 +105,11 @@ class userInfo extends Component {
                   <br />
                   <button onClick={this.editUser}>Update</button>
                 </div>
-           
+           </form>
+           </div>
+           </div>
     )
-          }
+  }
         
 }
     

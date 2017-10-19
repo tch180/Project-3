@@ -5,6 +5,7 @@ const mongoose = require("mongoose");
 const app = express();
 const chef = require('./routes/chefscontroller');
 const user = require('./routes/usercontroller');
+const recipes = require('./routes/menucontroller')
 
 
 
@@ -30,8 +31,9 @@ app.use(bodyParser.json());
 //Middleware
 ///////////////
 app.use(express.static(__dirname + "/client/build/"));
-app.use("/api/secondchef", chef);
-app.use("/api/users", user )
+app.use("/api/secondChef", chef);
+app.use("/api/users", user );
+//app.use("/api/recipes", recipes);
 
 
 ///////////////
