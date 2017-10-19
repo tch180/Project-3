@@ -12,6 +12,8 @@ router.get('/', async (req, res) => {
     res.send(err)
   }
 })
+
+
 router.get('/:id', async (req, res) => {
   try {
     const chef = await chefModel.findById(req.params.id)
@@ -20,6 +22,9 @@ router.get('/:id', async (req, res) => {
     res.send(err)
   }
 })
+
+
+
 router.post('/', async (req, res) => {
   try {
     const newchef = new chef(req.body.chef)
