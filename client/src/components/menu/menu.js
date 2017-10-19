@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import Navbar from "../Navbar";
 import axios from "axios";
+
+
 import { Link } from 'react-router-dom'
 class menu extends Component {
     state ={
@@ -18,6 +20,7 @@ componentWillMount() {
 
     render() {
         return(
+            
         this.state.recipes.map(recipe =>{
 
         
