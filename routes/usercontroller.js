@@ -28,7 +28,9 @@ router.get('/', async (req, res) => {
       res.send(err)
     }
   })
-
+///////////////
+//Patch
+///////////////
   router.patch('/:id', async (req,res)=>{
     const updatedUser = req.body.users
     console.log(req.params.id)
