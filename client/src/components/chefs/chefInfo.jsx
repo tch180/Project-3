@@ -37,7 +37,7 @@ class chefinfo extends Component {
                   <div className="card-action">
                   <div>
                     <a href="#">Book Now!!</a>
-                    <a href='#'>Back to Chefs</a>
+                    <a href='/chefs'>Back to Chefs</a>
                   </div>
                 </div>
               </div>

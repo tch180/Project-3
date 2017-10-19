@@ -63,6 +63,7 @@ class userInfo extends Component {
 
   componentWillMount() {
     this.getAllUser();
+    this.editUser();
   }
 
   
@@ -70,7 +71,8 @@ class userInfo extends Component {
     if (this.state.redirectToAllUser){
       return <Redirect to={`/allUsers`}/>
     }
-    return <div>
+    return 
+    <div>
         <pre>{JSON.stringify(this.state.user)}</pre>
         <Navbar />
 
@@ -83,7 +85,7 @@ class userInfo extends Component {
                     </div>
                     <div>
                             <label>Phone Number:</label>
-                            <input onChange={this.handleChange} type="text" name="phoneNumber" placeholder={this.state.user.phonenumber} value={this.state.user.phoneNumber} />
+                            <input onChange={this.handleChange} type="text" name="phoneNumber" placeholder={this.state.user.phonenumber} value={this.state.user.phoneNumber}/>
                     </div>
                     <div>
                             <label>Email:</label>
@@ -103,7 +105,7 @@ class userInfo extends Component {
                  
                   <br />
                   <button onClick={this.editUser}>Update</button>
-                </div>
+    </div>
            
   }
 }

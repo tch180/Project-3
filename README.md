@@ -1,6 +1,25 @@
 # Project-3
 NetFlix of Chefs 
 
+Imagine if you always had a chef on call, to cook for you you when ever you wanted. 
+birthdays
+partys
+Small - Medium size catering 
+
+
+
+
+<img scr=('https://i.imgur.com/NCTOjV4.jpg')/>
+
+
+
+
+
+
+
+
+
+
 
 Github
 https://github.com/tch180/Project-3
@@ -15,3 +34,7 @@ https://www.lucidchart.com/documents/view/ef9a0084-8f64-4885-aa2f-9cec4aeadd9e (
 
 Heroku 
 https://second-chefs.herokuapp.com/
+
+
+### cited
+w3schools
