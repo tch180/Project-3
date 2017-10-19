@@ -10,7 +10,7 @@ class users extends Component {
 
   getAllChef = async () => {
     const res = await axios.get("/api/users");
-    // console.log(res.data);
+    console.log(res.data);
     this.setState({ users: res.data });
   };
 
