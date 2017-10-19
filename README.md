@@ -12,6 +12,7 @@ would including geolocation
 a total cost page, with detailed info of what was ordered
 an expected arrival time for the chef. 
 as little as an hour notice. 
+breaking down components to smaller pieces 
 
 
 
