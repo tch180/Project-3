@@ -50,7 +50,7 @@ const usersSchema = new Schema({
     },
     email: {
         type: String,
-        required: true
+        required: true,
     },
     phoneNumber: {
         type: String,
@@ -59,7 +59,7 @@ const usersSchema = new Schema({
     }, 
     address: {
         type: String,
-        required: true
+        required: true,
     },
     
 

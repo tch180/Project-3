@@ -28,6 +28,18 @@ router.get('/', async (req, res) => {
       res.send(err)
     }
   })
+
+  router.patch('/:id', async (req,res)=>{
+    const updatedUser = req.body.users
+    console.log('route hit ')
+    const user = await usersModel.findById(req.params.id)
+    user.name = updatedUser.Name
+    user.phoneNumber = updatedUser.phoneNumber
+    user.email = updatedUser.email
+    user.address = updatedUser.address
+    const saved = await user.save()
+    res.json(saved)
+  })
   ///////////////
   //Create
   ///////////////
@@ -64,13 +76,15 @@ router.post('/', async (req,res)=> {
 
 router.delete('/:id', async (req, res) => {
   // Find the user
-  const user = await user.findById(req.params.userId)
+  try{
+    console.log(req.params.id)
+  const user = await usersModel.findByIdAndRemove(req.params.id)
   // Find the specific idea and remove it from the array
-  user.id(req.params.id).remove()
-  // Save the updated user
-  const saved = await user.save()
-  // Send the user object
-  res.json(saved)
+ 
+  res.json('saved')
+  } catch (error) {
+    res.send(error)
+  }
 })
 
   module.exports = router

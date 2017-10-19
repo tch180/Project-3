@@ -7,22 +7,27 @@ class users extends Component {
   state = {
     users: []
   };
+
   getAllChef = async () => {
     const res = await axios.get("/api/users");
     // console.log(res.data);
     this.setState({ users: res.data });
   };
 
+
+  
  
-  deleteUser = async () => {
-    const userId = this.props.match.params._id
-    // const id = userId
-    // const res = await axios.delete('/api/users/${userId}')
-    console.log(this.props)
-  }
   componentWillMount() {
     this.getAllChef();
+  } 
+
+deleteUser = async (userId) => {
+    console.log(userId)
+    const res = await axios.delete(`/api/users/${userId}`)
+
+    this.setState({users: res.data.user})
   }
+  
   render() {
     return (
       <div>
@@ -33,6 +38,7 @@ class users extends Component {
 
         {this.state.users.map(user => {
           return (
+            
             <div className="row">
               <div className="col s12 m6">
                 <div className="card black darken-1">
@@ -44,11 +50,12 @@ class users extends Component {
                   </div>
                   <div className="card-action">
                   <div><Link key={user._id} to={`/users/${user._id}/userInfo`}>Edit</Link></div>
-                    <button key={user._id} onClick={this.deleteUser}>Delete</button>
+                    
                   </div>
                 </div>
               </div>
             </div>
+            
           );
         })}
       </div>
