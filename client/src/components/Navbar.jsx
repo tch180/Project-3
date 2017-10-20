@@ -14,14 +14,14 @@ class Navbar extends Component {
                 <div>
         <nav>
         <div className="nav-wrapper">
-          <a href="#" background-color='black'  className="brand-logo right">2nd Chef</a>
+          <a href="#"  className="brand-logo right">2nd Chef</a>
           <ul id="nav-mobile" className="left hide-on-med-and-down">
             <li><a href="/">Home</a></li>
             <li><a href="/login">Login</a></li>
             <li><a href="/signup">Sign-Up</a></li>
             <li><a href="/chefs">Chefs</a></li>
             <li><a href='/allUsers'>Users</a></li>
-            <li><a href='./menu'>Menu</a></li>
+            <li><a href='/menu'>Menu</a></li>
             
           </ul>
         </div>

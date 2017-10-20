@@ -24,14 +24,17 @@ componentWillMount() {
 
     render() {
         return(
-            
+            <div>
+             <Navbar/>
+             </div>
+        )
         this.state.recipes.map(recipe =>{
 
-        
+          
         return (
             <div>
-                <Navbar/>
-             {/*    <div>
+             
+               <div>
                 <div className="card">
     <div className="card-image waves-effect waves-block waves-light">
       <img className="activator" src="images/office.jpg"/>
@@ -45,11 +48,12 @@ componentWillMount() {
       <p>Here is some more information about this product that is only revealed once clicked on.</p>
     </div>
   </div>
-                </div> */}
+                </div> 
+                }
             </div>
         );
              })
-        )
+        
     }
 }
 export default menu;

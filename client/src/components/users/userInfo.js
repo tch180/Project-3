@@ -95,11 +95,6 @@ class userInfo extends Component {
                             <input onChange={this.handleChange} type="text" name="address" placeholder={this.state.user.address} value={this.state.user.address}/>
                     </div>
                     <div> <button onClick={this.deleteUser}>Delete</button>
-                    
-               
-        
-
-        
                   <button href="./allUsers">Back to users</button>
                  
                   <br />
