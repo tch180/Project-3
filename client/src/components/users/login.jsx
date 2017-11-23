@@ -1,7 +1,24 @@
 import React, { Component } from 'react';
 import Navbar from '../Navbar';
 import axios from 'axios';
+import styled from 'styled-components';
 
+
+const Formstyle = styled.div`
+
+
+label {
+  color: black;
+  border-bottom: 1px solid #060606;
+}
+input {
+  color: black;
+  border-bottom: 1px solid #060606;
+},
+.placeholder {
+  color:black;
+}
+`
 
 class login extends Component {
     state= {
@@ -49,6 +66,7 @@ class login extends Component {
           <div>
           <Navbar/>
         <div>
+        <Formstyle>
             <form onSubmit={this.handleSubmit} action="" >
               <div>
               <label hmtlFor="name">User-Name:</label>
@@ -60,6 +78,7 @@ class login extends Component {
               </div><br/> 
               <div><a href="/chefs" class="waves-effect waves-light btn">Submit<i class="material-icons right"></i></a></div>
             </form>
+            </Formstyle>
             </div>
             </div>
           );

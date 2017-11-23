@@ -8,7 +8,7 @@ import signup from './components/users/signup'
 import allUsers from './components/users/allUsers'
 import userInfo from './components/users/userInfo'
 import menuinfo from './components/menu/menuinfo'
-
+import './App.css';
 
 class App extends Component {
   render () {

@@ -5,8 +5,9 @@ import styled from 'styled-components';
 
 const Homestyle = styled.div`
 text-align: center;
-background-color: black;
-color: red;
+background-color: #969084;
+color: 100e0D;
+
 `
 
 

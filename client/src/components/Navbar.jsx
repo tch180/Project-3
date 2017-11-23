@@ -4,17 +4,24 @@ import styled from 'styled-components';
 const Navbarhead = styled.div`
 background-image: url('https://i.imgur.com/NCTOjV4.jpg');
 background-color:black;
+nav {
+    color: #fff;
+    background-color: #614748;
+    
+
+}
 `
 
 
 class Navbar extends Component {
     render() {
         return (
-            <Navbarhead>
+            
                 <div>
+                    <Navbarhead>
         <nav>
-        <div className="nav-wrapper">
-          <a href="/Home"  className="brand-logo right">2nd Chef</a>
+        <div className="nav-wrapper" >
+          <a href="/Home"  grey darken-3 className="brand-logo right">2nd Chef</a>
           <ul id="nav-mobile" className="left hide-on-med-and-down">
             <li><a href="/">Home</a></li>
             <li><a href="/login">Login</a></li>
@@ -26,8 +33,9 @@ class Navbar extends Component {
           </ul>
         </div>
       </nav>
+      </Navbarhead>
             </div>
-            </Navbarhead>
+           
         );
     }
 }
