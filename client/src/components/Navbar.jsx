@@ -14,7 +14,7 @@ class Navbar extends Component {
                 <div>
         <nav>
         <div className="nav-wrapper">
-          <a href="#"  className="brand-logo right">2nd Chef</a>
+          <a href="/Home"  className="brand-logo right">2nd Chef</a>
           <ul id="nav-mobile" className="left hide-on-med-and-down">
             <li><a href="/">Home</a></li>
             <li><a href="/login">Login</a></li>

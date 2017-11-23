@@ -20,7 +20,7 @@ class chefs extends Component {
     return (
       <div>
 
-        <pre>{JSON.stringify(this.state.chefs)}</pre>
+        {/* <pre>{JSON.stringify(this.state.chefs)}</pre> */}
 
         <Navbar />
         {this.state.chefs.map(chef => {
