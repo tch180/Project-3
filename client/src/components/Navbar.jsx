@@ -7,9 +7,8 @@ background-color:black;
 nav {
     color: #fff;
     background-color: #614748;
-    
+},
 
-}
 `
 
 
@@ -21,7 +20,7 @@ class Navbar extends Component {
                     <Navbarhead>
         <nav>
         <div className="nav-wrapper" >
-          <a href="/Home"  grey darken-3 className="brand-logo right">2nd Chef</a>
+          <a href="/"  grey darken-3 className="brand-logo right">2nd Chef</a>
           <ul id="nav-mobile" className="left hide-on-med-and-down">
             <li><a href="/">Home</a></li>
             <li><a href="/login">Login</a></li>

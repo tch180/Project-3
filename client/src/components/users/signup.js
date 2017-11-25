@@ -2,6 +2,18 @@ import React, { Component } from 'react';
 import Navbar from '../Navbar'
 import axios from 'axios'
 import { Redirect } from 'react-router-dom'
+import styled from 'styled-components';
+
+const Formstyle = styled.div`
+
+
+label {
+  color: black;
+  border-bottom: 2px solid black;
+}
+
+`
+
 
 
 class Signup extends Component {
@@ -42,7 +54,7 @@ handleSubmit = async (event)=> {
         <div>
         <Navbar/> 
             <div>
-
+            <Formstyle>
                 <form onSubmit={this.handleSubmit}>
                     <div>
                             <label htmlFor='name'>Name:</label>
@@ -60,10 +72,13 @@ handleSubmit = async (event)=> {
                             <label htmlFor='address' >Address:</label>
                             <input type="text" placeholder="Enter Address" name="address" value={this.state.users.address}/>
                     </div>
+
                     <div>
                     <button>Submit </button>
                     </div>
                  </form>
+                 </Formstyle>
+
             </div>
         </div>
         );

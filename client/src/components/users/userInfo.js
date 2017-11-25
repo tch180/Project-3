@@ -72,14 +72,14 @@ class userInfo extends Component {
     }
     return (
     <div>
-        <pre>{JSON.stringify(this.state.user)}</pre>
+       
         <Navbar />
 
 
 <div>
         <form >
                     <div>
-                            <label htmlFor="name">Name:{this.state.user.name}</label>
+                            <label >Name:{this.state.user.name}</label>
                             <input onChange={this.handleChange} type="text" name="name" placeholder={this.state.user.name} value={this.state.user.name}/>
                     </div>
                     <div>

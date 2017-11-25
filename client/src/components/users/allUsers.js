@@ -31,8 +31,8 @@ deleteUser = async (userId) => {
   render() {
     return (
       <div>
-
-        <pre>{JSON.stringify(this.state.user)}</pre>
+{/* 
+        <pre>{JSON.stringify(this.state.user)}</pre> */}
 
         <Navbar />
 
