@@ -1,11 +1,11 @@
-import React, { Component } from 'react';
+import React  from 'react';
 import Navbar from './Navbar';
 import styled from 'styled-components';
 
 
 const Homestyle = styled.div`
 text-align: center;
-background-color: #969084;
+background-color: #96908491;
 color: 100e0D;
 
 `

@@ -32,12 +32,12 @@ class chefinfo extends Component {
                     <span className="card-title">{this.state.chef.name}</span>
                     <h4>Specialty:{this.state.chef.specialty}</h4>
                     <h4>bio:{this.state.chef.bio}</h4>
-                    <h4>Price:{this.state.chef.price}</h4>
+                    <h4>Price: {this.state.chef.price}/hr</h4>
                   </div>
                   <div className="card-action">
                   <div>
                     <a href="#">Book Now!!</a>
-                    <a href='/chefs'>Back to Chefs</a>
+                    <a href="/chefs">Back to Chefs</a>
                   </div>
                 </div>
               </div>

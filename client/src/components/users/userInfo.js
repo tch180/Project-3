@@ -43,13 +43,13 @@ class userInfo extends Component {
         const res = await axios.patch(`/api/users/${userid}`, {
           users: this.state.user,
         })
-        this.setState({ user: res.data, redirectToAllUser: true })
+        this.setState({  redirectToAllUser: true })
       }
     
 
   handleSubmit = async (event)=> {
     event.preventDefault()
-    const res = await axios.post
+    // const res = await axios.post
     this.props.updateUser(this.state.newUser)
     const emptyForm = {
       name:'',
@@ -95,7 +95,7 @@ class userInfo extends Component {
                             <input onChange={this.handleChange} type="text" name="address" placeholder={this.state.user.address} value={this.state.user.address}/>
                     </div>
                     <div> <button onClick={this.deleteUser}>Delete</button>
-                  <button href="./allUsers">Back to users</button>
+                  {/* <button  Link to="/allUsers">Back to users</button> */}
                  
                   <br />
                   <button onClick={this.editUser}>Update</button>

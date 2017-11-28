@@ -2,6 +2,24 @@ import React, { Component } from "react";
 import Navbar from "../Navbar";
 import axios from "axios";
 import { Link } from 'react-router-dom'
+import styled from 'styled-components';
+
+
+const Chefstyle = styled.div`
+
+card-content {
+  background-color: #6b6464;
+
+}
+
+`
+
+
+
+
+
+
+
 
 class chefs extends Component {
   state = {
@@ -18,20 +36,23 @@ class chefs extends Component {
   }
   render() {
     return (
+      <Chefstyle>
+      
       <div>
 
         {/* <pre>{JSON.stringify(this.state.chefs)}</pre> */}
 
         <Navbar />
+        
         {this.state.chefs.map(chef => {
           return (
-            <div className="row">
+            <div className="row" >
               <div className="col s12 m6">
                 <div className="card black darken-1">
                   <div className="card-content white-text">
-                    <span className="card-title">{chef.name} </span>
-                    <h3>{chef.specialty}</h3>
-                    <h4>{chef.price}</h4>
+                    <span className="card-title"><h4>{chef.name} </h4></span>
+                    <h5>specialty:{chef.specialty}</h5>
+                    <h6>Price:{chef.price}/hr</h6>
                   </div>
                   <div className="card-action">
                   <div><Link key={chef._id} to={`/chef/${chef._id}/chefinfo`}>Info</Link></div>)
@@ -39,12 +60,19 @@ class chefs extends Component {
                   </div>
                 </div>
               </div>
-            </div>
+             </div>
+
+        
+
           );
         })}
-      </div>
+
+</div>
+</Chefstyle>
+
     )
   }
 }
+
 
 export default chefs;
