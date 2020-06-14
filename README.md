@@ -20,22 +20,6 @@ breaking down components to smaller pieces
 
 
 
-issues-
-trying to change a controlled component 
-understanding react syntax and routing
-
-Controlled Input Null Value
-Specifying the value prop on a controlled component prevents the user from changing the input unless you desire so. If you’ve specified a value but the input is still editable, you may have accidentally set value to undefined or null.
-The following code demonstrates this. (The input is locked at first but becomes editable after a short delay.)
-ReactDOM.render(<input value="hi" />, mountNode);
-
-setTimeout(function() {
-  ReactDOM.render(<input value={null} />, mountNode);
-}, 1000);
-Alternatives to Controlled Components
-It can sometimes be tedious to use controlled components, because you need to write an event handler for every way your data can change and pipe all of the input state through a React component. This can become particularly annoying when you are converting a preexisting codebase to React, or integrating a React application with a non-React library. In these situations, you might want to check out uncontrolled components, an alternative technique for implementing input forms.
-
-
 
 ########https://reactjs.org/docs/forms.html#############
 ########http://materializecss.com/grid.html#############
@@ -67,4 +51,3 @@ reactjs.org
 
 
 
-// edit page is not my own, was provided by jamye to try and work through issue. 
